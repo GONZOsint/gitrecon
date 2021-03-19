@@ -46,4 +46,4 @@ optional arguments:
   -a, --avatar  download avatar pic
   -o, --output  save output as json
 ```
-![image](https://imgur.com/bW5XRHH.png)
+![image](https://imgur.com/YERiJRM.png)
