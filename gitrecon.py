@@ -14,13 +14,13 @@ parser.add_argument('username')
 parser.add_argument('-a', '--avatar', dest='avatar', action='store_true',
                     help="download avatar pic")
 parser.add_argument('-o', '--output', dest='output', action='store_true',
-                    help="save output")
+                    help="save json output")
 
 args = parser.parse_args()
 
 console = Console()
 
-token = ''
+token = '<API here>'
 headers = {
     'Authorization': 'token ' + token
 }
