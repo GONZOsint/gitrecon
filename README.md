@@ -27,9 +27,9 @@ git clone https://github.com/GONZOsint/gitrecon.git
 cd gitrecon/
 python3 -m pip install -r requirements.txt
 ```
-It is possible to use the Github API by editing line 23 of the gitrecon.py file
+It is possible to use a [Github access token](https://github.com/settings/tokens) by editing line 23 of the gitrecon.py file
 ```
-token = '<API here>'
+token = '<Access token here>'
 ```
 
 ---
