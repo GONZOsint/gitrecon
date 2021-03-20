@@ -47,3 +47,40 @@ optional arguments:
   -o, --output  save output as json
 ```
 ![image](https://imgur.com/YERiJRM.png)
+
+---
+
+## Features
+
+- #### Profile info
+  - Username
+  - Name
+  - User ID
+  - Avatar url
+  - Email
+  - Location
+  - Bio
+  - Company
+  - Blog
+  - Gravatar ID
+  - Twitter username
+  - Followers
+  - Following
+  - Created at
+  - Updated at
+
+- #### Extract Orgs
+
+- #### Search for leaked emails on commits
+
+
+---
+
+## 🔒 Prevention
+To avoid this type of leaks, certain configurations can be made on Github:
+
+Settings url: https://github.com/settings/emails
+
+- ✔️ Keep my email addresses private
+
+- ✔️ Block command line pushes that expose my email
