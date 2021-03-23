@@ -49,6 +49,8 @@ optional arguments:
   -a, --avatar        download avatar pic
   -o, --output        save output
 ```
+Results are saved in ```results/<username>/``` path.
+
 ![image](https://imgur.com/YERiJRM.png)
 
 ---
