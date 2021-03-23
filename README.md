@@ -1,7 +1,7 @@
 # gitrecon
 
 
-OSINT tool to get information from a github profile and find GitHub user's email addresses leaked on commits.
+OSINT tool to get information from a Github or Gitlab profile and find user's email addresses leaked on commits.
 
 ## 📚 How does this work?
 GitHub uses the email address associated with a GitHub account to link commits and other activity to a GitHub profile. When a user makes commits to public repos their email address is usually published in the commit and becomes publicly accessible, if you know where to look.
@@ -27,7 +27,9 @@ git clone https://github.com/GONZOsint/gitrecon.git
 cd gitrecon/
 python3 -m pip install -r requirements.txt
 ```
-It is possible to use a [Github access token](https://github.com/settings/tokens) by editing line 23 of the gitrecon.py file
+It is possible to use a [Github access token](https://github.com/settings/tokens) by editing line 3 of the modules/github_recon.py file. This will prevent a possible API ban.
+
+It is possible to use a [Gitlab access token](https://gitlab.com/-/profile/personal_access_tokens) by editing line 3 of the modules/gitlab_recon.py file. This will prevent a possible API ban.
 ```
 token = '<Access token here>'
 ```
@@ -36,22 +38,23 @@ token = '<Access token here>'
 
 ## 🔎 Usage
 ```
-usage: gitrecon.py [-h] [-a] [-o] username
+usage: gitrecon.py [-h] -s {github,gitlab} [-a] [-o] username
 
 positional arguments:
   username
 
 optional arguments:
-  -h, --help    show this help message and exit
-  -a, --avatar  download avatar pic
-  -o, --output  save output as json
+  -h, --help          show this help message and exit
+  -s {github,gitlab}  sites selection
+  -a, --avatar        download avatar pic
+  -o, --output        save output
 ```
 ![image](https://imgur.com/YERiJRM.png)
 
 ---
 
 ## Features
-
+### Github
 - #### Profile info
   - Username
   - Name
@@ -68,19 +71,48 @@ optional arguments:
   - Following
   - Created at
   - Updated at
-
 - #### Extract Orgs
-
+- #### Extract SSH keys
 - #### Search for leaked emails on commits
-
+### Gitlab
+- #### Profile info
+  - Username
+  - Name
+  - User ID
+  - State
+  - Status
+  - Avatar url
+  - Email
+  - Location
+  - Bio
+  - Organization
+  - Job title
+  - Work information
+  - Web
+  - Skype
+  - Linkedin
+  - Twitter
+  - Followers
+  - Following
+  - Created at
+- #### Extract SSH keys
+- #### Search for leaked emails on commits
 
 ---
 
 ## 🔒 Prevention
-To avoid this type of leaks, certain configurations can be made on Github:
+### Configurations on Github:
 
 Settings url: https://github.com/settings/emails
 
 - ✔️ Keep my email addresses private
 
 - ✔️ Block command line pushes that expose my email
+
+### Configurations on Gitlab:
+
+Settings url: https://gitlab.com/-/profile
+
+- ✔️ Public email: do not show on profile
+
+- ✔️ Commit email: use a private email
