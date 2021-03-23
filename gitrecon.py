@@ -113,9 +113,12 @@ def print_gitlab_results(user_data, status, keys):
         print('[bold red] [+] Linkedin: [/bold red]' + user_data['linkedin'])
     if user_data['twitter']:
         print('[bold red] [+] Twitter: [/bold red]' + user_data['twitter'])
-    print('[bold red] [+] Followers: [/bold red]' + str(user_data['followers']))
-    print('[bold red] [+] Following: [/bold red]' + str(user_data['following']))
-    print('[bold red] [+] Created at: [/bold red]' + str(user_data['created_at']))
+    try:
+        print('[bold red] [+] Followers: [/bold red]' + str(user_data['followers']))
+        print('[bold red] [+] Following: [/bold red]' + str(user_data['following']))
+        print('[bold red] [+] Created at: [/bold red]' + str(user_data['created_at']))
+    except:
+        pass
     for email in gitlab_recon.valid_emails:
         print('[bold red] [+] Leaked email: [/bold red]' + email)
 
@@ -198,9 +201,12 @@ def create_gitlab_json_output(user_data, status, keys):
         json_output['linkedin'] = user_data['linkedin']
     if user_data['twitter']:
         json_output['twitter'] = user_data['twitter']
-    json_output['followers'] = user_data['followers']
-    json_output['following'] = user_data['following']
-    json_output['created_at'] = user_data['created_at']
+    try:
+        json_output['followers'] = user_data['followers']
+        json_output['following'] = user_data['following']
+        json_output['created_at'] = user_data['created_at']
+    except:
+        pass
     json_output['leaked_emails'] = []
     for email in gitlab_recon.valid_emails:
         json_output['leaked_emails'].append(email)
@@ -239,6 +245,13 @@ def save_output(json_output):
 
 def download_github_avatar(url):
     path = 'results/' + args.username
+    if not os.path.exists(path):
+        try:
+            os.mkdir(path)
+        except:
+            print()
+            print('[bold red] [!] Error creating output folder[/bold red]')
+            print()
     r = requests.get(url)
     if args.sites == 'github':
         with open(path + '/' + args.username + '_github_avatar.jpg', "wb") as f:
