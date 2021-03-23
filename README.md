@@ -54,65 +54,48 @@ optional arguments:
 ---
 
 ## Features
-### Github
-- #### Profile info
-  - Username
-  - Name
-  - User ID
-  - Avatar url
-  - Email
-  - Location
-  - Bio
-  - Company
-  - Blog
-  - Gravatar ID
-  - Twitter username
-  - Followers
-  - Following
-  - Created at
-  - Updated at
-- #### Extract Orgs
-- #### Extract SSH keys
-- #### Search for leaked emails on commits
-### Gitlab
-- #### Profile info
-  - Username
-  - Name
-  - User ID
-  - State
-  - Status
-  - Avatar url
-  - Email
-  - Location
-  - Bio
-  - Organization
-  - Job title
-  - Work information
-  - Web
-  - Skype
-  - Linkedin
-  - Twitter
-  - Followers
-  - Following
-  - Created at
-- #### Extract SSH keys
-- #### Search for leaked emails on commits
+- #### Gitlab and Github SSH keys
+- #### Gitlab and Github leaked emails on commits
+Github profile info | Gitlab profile info
+------------ | -------------
+Username | Username
+Name | Name
+User ID | User ID
+❌ | State
+❌ | Status
+Avatar url | Avatar url
+Email | Email
+Location | Location
+Bio | Bio
+Company | Organization
+Organizations  |  ❌
+❌ | Job title
+❌ | Work information
+Blog | Web
+Gravatar ID | ❌
+Twitter | Twitter
+❌ | Skype
+❌ | Linkedin
+Followers | Followers
+Following | Following
+Created at | Created at
+Updated at | ❌
 
 ---
 
 ## 🔒 Prevention
 ### Configurations on Github:
 
-Settings url: https://github.com/settings/emails
+- Settings url: https://github.com/settings/emails
 
-- ✔️ Keep my email addresses private
+  - ✔️ Keep my email addresses private
 
-- ✔️ Block command line pushes that expose my email
+  - ✔️ Block command line pushes that expose my email
 
 ### Configurations on Gitlab:
 
-Settings url: https://gitlab.com/-/profile
+- Settings url: https://gitlab.com/-/profile
 
-- ✔️ Public email: do not show on profile
+  - ✔️ Public email: do not show on profile
 
-- ✔️ Commit email: use a private email
+  - ✔️ Commit email: use a private email
