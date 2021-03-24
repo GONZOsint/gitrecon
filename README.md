@@ -54,7 +54,7 @@ Results are saved in ```results/<username>/``` path.
 
 ---
 
-## Features
+## ⚔️ Features
 - #### Gitlab and Github leaked emails on commits
 - #### Gitlab and Github SSH keys
 Github SSH keys | Gitlab SSH keys
