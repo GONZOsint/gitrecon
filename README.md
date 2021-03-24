@@ -51,13 +51,21 @@ optional arguments:
 ```
 Results are saved in ```results/<username>/``` path.
 
-![image](https://imgur.com/YERiJRM.png)
 
 ---
 
 ## Features
-- #### Gitlab and Github SSH keys
 - #### Gitlab and Github leaked emails on commits
+- #### Gitlab and Github SSH keys
+Github SSH keys | Gitlab SSH keys
+------------ | -------------
+ID | ❌
+❌ | Tittle
+❌ | Created at
+❌ | Expires at
+Key | Key
+
+- #### Gitlab and Github profile info
 Github profile info | Gitlab profile info
 ------------ | -------------
 Username | Username
