@@ -14,6 +14,11 @@ Finding a GitHub user's email address is often as simple as looking at their [re
 
 > Source: https://thedatapack.com/tools/find-github-user-email/
 
+
+### Disclaimer
+
+As [@pielco11](https://twitter.com/noneprivacy/status/1373164632756604934) warned, emails and other data can be spoofed in commits.
+
 ---
 
 ## ✔️ Prerequisites
@@ -27,9 +32,9 @@ git clone https://github.com/GONZOsint/gitrecon.git
 cd gitrecon/
 python3 -m pip install -r requirements.txt
 ```
-It is possible to use a [Github access token](https://github.com/settings/tokens) by editing line 3 of the modules/github_recon.py file. This will prevent a possible API ban.
+It is possible to use a [Github access token](https://github.com/settings/tokens) by editing line 3 of the ```modules/github_recon.py``` file. This will prevent a possible API ban.
 
-It is possible to use a [Gitlab access token](https://gitlab.com/-/profile/personal_access_tokens) by editing line 3 of the modules/gitlab_recon.py file. This will prevent a possible API ban.
+It is possible to use a [Gitlab access token](https://gitlab.com/-/profile/personal_access_tokens) by editing line 3 of the ```modules/gitlab_recon.py``` file. This will prevent a possible API ban.
 ```
 token = '<Access token here>'
 ```
